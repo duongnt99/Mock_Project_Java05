@@ -83,8 +83,8 @@ public abstract class Book {
 
 	@Override
 	  public String toString() {
-	    return "id=" + id + ", bookTitle=" + bookTitle + ", author=" + author + ", brief=" + brief + ", publisher="
-	        + publisher + ", content=" + content + ", category=" + category;
+	    return "id=" + id + ", bookTitle=" + bookTitle + ", author=" + author + ", category=" + category 	+ ", brief=" + brief + ", content=" + content + ", publisher="
+	        + publisher;
 	  }
 
 }
