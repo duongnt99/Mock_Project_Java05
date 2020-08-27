@@ -1,14 +1,16 @@
 package project.com.enity;
 
 public abstract class Book {
+	private int stt;
 	private int id;
-	private String bookTitle;
+	private String bookName;
 	private String author;
 	private String brief;
+	private String bookTitle;
 	private String publisher;
 	private String content;
 	private String category;
-
+	
 	public Book() {
 	    // TODO Auto-generated constructor stub
 	}
@@ -24,6 +26,14 @@ public abstract class Book {
 	   this.category = category;
 	}
 
+	
+	public int getStt() {
+		return stt;
+	}
+
+	public void setStt(int stt) {
+		this.stt = stt;
+	}
 
 	public int getId() {
 		return id;
@@ -33,12 +43,12 @@ public abstract class Book {
 		this.id = id;
 	}
 
-	public String getBookTitle() {
-		return bookTitle;
+	public String getBookName() {
+		return bookName;
 	}
 
-	public void setBookTitle(String bookTitle) {
-		this.bookTitle = bookTitle;
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
 	}
 
 	public String getAuthor() {
@@ -55,6 +65,14 @@ public abstract class Book {
 
 	public void setBrief(String brief) {
 		this.brief = brief;
+	}
+
+	public String getBookTitle() {
+		return bookTitle;
+	}
+
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
 	}
 
 	public String getPublisher() {
@@ -83,7 +101,7 @@ public abstract class Book {
 
 	@Override
 	  public String toString() {
-	    return "id=" + id + ", bookTitle=" + bookTitle + ", author=" + author + ", category=" + category 	+ ", brief=" + brief + ", content=" + content + ", publisher="
+	    return "STT=" + stt + ", id=" + id + ", Name =" + bookName + ", Author=" + author + ", Category=" + category 	+ ", Brief=" + brief + ", Title=" + bookTitle + ", publisher="
 	        + publisher;
 	  }
 
