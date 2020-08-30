@@ -1,6 +1,6 @@
 package project.com.enity;
 
-public abstract class User {
+public class User {
 	private int id;
 	private String userName;
 	private String passWord;
@@ -50,7 +50,7 @@ public abstract class User {
 	public void setState(int state) {
 		this.state = state;
 	}
-
+	
 	@Override
 	  public String toString() {
 	    return "id=" + id + ", username=" + userName + ", password=" + passWord + ", state=" + state;

@@ -1,7 +1,6 @@
 package project.com.enity;
 
-public abstract class Book {
-	private int stt;
+public class Book {
 	private int id;
 	private String bookName;
 	private String author;
@@ -12,12 +11,13 @@ public abstract class Book {
 	private String category;
 	
 	public Book() {
-	    // TODO Auto-generated constructor stub
+	    
 	}
 
-	public Book(int id, String bookTitle, String author, String brief, String publisher, String content, String category) {
+	public Book(int id, String bookName, String bookTitle, String author, String brief, String publisher, String content, String category) {
 	   super();
 	   this.id = id;
+	   this.bookName = bookName;
 	   this.bookTitle = bookTitle;
 	   this.author = author;
 	   this.brief = brief;
@@ -27,12 +27,29 @@ public abstract class Book {
 	}
 
 	
-	public int getStt() {
-		return stt;
+	
+	public Book(int id, String bookName, String bookTitle, String author, String publisher, String category) {
+		super();
+		this.id = id;
+		this.bookName = bookName;
+		this.bookTitle = bookTitle;
+		this.author = author;
+		this.publisher = publisher;
+		this.category = category;
 	}
+	
 
-	public void setStt(int stt) {
-		this.stt = stt;
+
+	public Book(int id, String author, String brief, String bookTitle, String publisher,
+			String content, String category) {
+		super();
+		this.id = id;
+		this.bookTitle = bookTitle;
+		this.author = author;
+		this.brief = brief;
+		this.publisher = publisher;
+		this.content = content;
+		this.category = category;
 	}
 
 	public int getId() {
@@ -98,10 +115,14 @@ public abstract class Book {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
+	
+	public void display () {
+		System.out.println(this);
+	}
+	
 	@Override
 	  public String toString() {
-	    return "STT=" + stt + ", id=" + id + ", Name =" + bookName + ", Author=" + author + ", Category=" + category 	+ ", Brief=" + brief + ", Title=" + bookTitle + ", publisher="
+	    return "id=" + id + ", Name =" + bookName + ", Author=" + author + ", Category=" + category 	+ ", Brief=" + brief + ", Title=" + bookTitle + ", publisher="
 	        + publisher;
 	  }
 
