@@ -66,7 +66,6 @@ public class ReadingBookManagement {
 				
 			}
 			else {
-				System.out.println("Hello User"); // dòng này thừa này
 				while (true) {
 					boolean logout = false;
 					System.out.println("Hello User, Please select function bellow by entering the corresponding number.");

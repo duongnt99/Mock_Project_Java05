@@ -11,7 +11,7 @@ CREATE TABLE [User](
 )
 
 CREATE TABLE BookCase(
-	BookCaseID INT IDENTITY PRIMARY KEY ,
+	BookCaseID INT PRIMARY KEY ,
 	BookCaseName NVARCHAR(50) NOT NULL,
 	constraint fk_BookCase foreign key (BookCaseID) references [user](UserID)
 
@@ -22,7 +22,7 @@ CREATE TABLE Book(
 	Author NVARCHAR(50) NOT NULL,
 	Brief NVARCHAR(255) NOT NULL,
 	Publisher NVARCHAR(50) NOT NULL,
-	Content NVARCHAR(255) NOT NULL,
+	Content NTEXT,
 	Category NVARCHAR(50) NOT NULL
 )
 
